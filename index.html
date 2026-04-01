@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header style="text-align: left">
     <div class="header-container">
         <div class="header-image">
-            <img src="img/minha_foto.jpg" alt="Daniel de Jesus">
+            <img src="img/minha_foto.jpg" alt="Daniel de Jesus" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'%3E%3Crect width=\'120\' height=\'120\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'60\' y=\'60\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'14\'%3EFoto%3C/text%3E%3C/svg%3E'">
         </div>
         <div class="header-info">
-            <h1>Daniel Batista de Jesus</h1>
-            <p class="header-subtitle">PhD. Candidate, Master and Bachelor in Physics</p>
-            <p class="header-subtitle">Science, Data, Analysis, Intellectual Property and Other Stuffs</p>
+            <h1>
+                Daniel Batista de Jesus
+                <p style="font-size: 1rem; margin-top: 10px;">
+                    PhD. Candidate, Master and Bachelor in Physics
+                </p>
+                <p style="font-size: 1rem; margin-top: 10px;">
+                    Science, Data, Analysis, Intellectual Property and Other Stuffs
+                </p>
+            </h1>
         </div>
     </div>
 
-    <div class="search-container">
+    <div style="margin-top: 20px;">
         <input type="text" id="campo-busca" placeholder="Buscar por Python, RNA, ESR, etc.">
         <button id="botao-busca">Buscar</button>
     </div>
@@ -29,37 +35,39 @@
         <!-- ===================================================== -->
         <!-- PROJETO 1: Stability of modified RNA e DNA -->
         <!-- ===================================================== -->
-        <section class="card-container">
-            <h1>Stability of modified RNA e DNA</h1>
-            <p>Application of Mesoscopic Statistical Model and Data Analysis of methylated sequences</p>
-            <p>Gathering, conditioning, Treatment and Analysis of data published in articles and scientific magazines.</p>
-            
-            <article class="card card-with-image">
-                <div class="card-image">
-                    <img src="img/pb_placeholder.png" alt="RNA Structure" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3ERNA%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="card-content">
-                    <h2>RNA</h2>
-                    <h3>2'-o-methylribose (NM)</h3>
-                    <h3>6 methyl Adenine (6mA)</h3>
-                    <h2>DNA</h2>
-                    <h3>5 methyl Cytosine (5mC)</h3>
-                    <h3>5 hydroxymethyl Cytosine (5hmC)</h3>
-                    <h3>6 methyl Adenine (6mA)</h3>
-                    <h3>1 methyl Adenine (1mA)</h3>
-                    <h3>1 methyl Guanine (1mG)</h3>
-                    <h3>3 methyl Thymine (3mT)</h3>
-                    <p><strong>Tools:</strong> Python, Bash, Shell Script</p>
-                    <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, reading, writing</p>
-                    <div class="card-buttons">
-                        <a href="projeto_rna.html" class="btn btn-primary">📄 Ver Projeto</a>
-                        <a href="docs/rna_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
-                        <a href="dashboard_rna.html" class="btn btn-dashboard">📊 Dashboard</a>
-                        <a href="https://sites.google.com/site/geraldweberufmg/group" class="btn btn-link" target="_blank">🔗 Grupo</a>
-                    </div>
-                </div>
-            </article>
-        </section>
+    <section class="card-container">
+    <h1>Stability of modified RNA e DNA</h1>
+    <p>Application of Mesoscopic Statistical Model and Data Analysis of methylated sequences</p>
+    <p>Gathering, conditioning, Treatment and Analysis of data published in articles and scientific magazines.</p>
+    
+    <article class="card card-with-image">
+        <div class="card-image">
+            <img src="img/pb_placeholder.png" alt="RNA Structure" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3ERNA%3C/text%3E%3C/svg%3E'">
+            <!--<img src="img/pb_placeholder_2.svg" alt="Segunda Imagem" style="margin-top: 0.5rem; width: 100%; border-radius: 0.75rem;" onerror="this.style.display='none'">-->
+        </div>
+        <div class="card-content">
+            <h2>RNA</h2>
+            <h3>2'-o-methylribose (NM)</h3>
+            <h3>6 methyl Adenine (6mA)</h3>
+            <h2>DNA</h2>
+            <h3>5 methyl Cytosine (5mC)</h3>
+            <h3>5 hydroxymethyl Cytosine (5hmC)</h3>
+            <h3>6 methyl Adenine (6mA)</h3>
+            <h3>1 methyl Adenine (1mA)</h3>
+            <h3>1 methyl Guanine (1mG)</h3>
+            <h3>3 methyl Thymine (3mT)</h3>
+            <p><strong>Tools:</strong> Python, Bash, Shell Script</p>
+            <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, reading, writing</p>
+            <div class="card-buttons">
+                <a href="projeto_rna.html" class="btn btn-primary">📄 Ver Projeto</a>
+                <a href="docs/rna_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                <a href="dashboard_rna.html" class="btn btn-dashboard">📊 Dashboard</a>
+                <a href="https://sites.google.com/site/geraldweberufmg/group" class="btn btn-link" target="_blank">🔗 Grupo</a>
+                <a href="https://bioinf.fisica.ufmg.br/app/comparetm.pl" class="btn btn-link" target="_blank">🔗 Group Online Tm Calculator </a>
+            </div>
+        </div>
+    </article>
+</section>
 
         <!-- ===================================================== -->
         <!-- PROJETO 2: Defects generation, radical detection -->
@@ -136,6 +144,7 @@
                         <a href="#" class="btn btn-secondary" target="_blank">📑 PDF (em breve)</a>
                         <a href="dashboard_gcn4.html" class="btn btn-dashboard">📊 Dashboard</a>
                         <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/" class="btn btn-link" target="_blank">🔗 Grupo</a>
+                        
                     </div>
                 </div>
             </article>
@@ -261,7 +270,7 @@
              <!-- NOVO: dr.ia -->
             <article class="card card-with-image">
                 <div class="card-image">
-                    <img src="img/spm_placeholder.png" alt="dr.ia" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Edr.ia%3C/text%3E%3C/svg%3E'">
+                    <img src="img/spm_particles.png" alt="dr.ia" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Edr.ia%3C/text%3E%3C/svg%3E'">
                 </div>
                 <div class="card-content">
                     <h2>Superparamagnetic Simulation</h2>
@@ -290,7 +299,7 @@
                 </div>
                 <div class="card-content">
                     <h2>Recycling Batteries</h2>
-                    <p>Project for sustainable recycling of lithium-ion batteries</p>
+                    <p>Project for sustainable recycling of  batteries</p>
                     <div class="card-buttons">
                         <a href="#" class="btn btn-primary">📄 Em breve</a>
                     </div>
@@ -310,3 +319,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
