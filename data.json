@@ -1,17 +1,53 @@
+ 
 [
     {
-    "name": "Stock-Price",
-    "description": "Stock-Price Analysis",
-    "tools": "Python, Bash, Shell Script",
-    "skills": "English, presentations, data visualization, analytics, comparison, writing, reading",
-    "link":""
-},
-
-{
-    "name": "Stock-Price",
-    "description": "Stock-Price Analysis",
-    "tools": "Python, Bash, Shell Script",
-    "skills": "English, presentations, data visualization, analytics, comparison, writing, reading",
-    "link":""
-}
+        "name": "Stability of modified RNA e DNA",
+        "description": "Application of Mesoscopic Statistical Model and Data Analysis of methylated sequences. Gathering, conditioning, Treatment and Analysis of data pulbished in articles and scitific magazines.",
+        "tools": "Python, Bash, Shell Script",
+        "skills": "Data visualization, analytics, methylated sequences (6mA, 5mC, etc)",
+        "link": "https://sites.google.com/site/geraldweberufmg/group",
+        "project_page": "projeto_rna.html",
+        "pdf": "docs/rna_analysis.pdf",
+        "dashboard": "dashboard_rna.html"
+    },
+    {
+        "name": "Poisoning of Zeolite Catalysts by Fe",
+        "description": "Dissertation project. FCC catalysts treated by artificial Poisoning process in laboratory.",
+        "tools": "Electron Spin Resonance (ESR), Raman, Mossbauer Spectroscopy, Magnetic Hysteresis",
+        "skills": "Data visualization, analytics, spectroscopy analysis",
+        "link": "https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/",
+        "project_page": "projeto_zeolite.html",
+        "pdf": "docs/zeolite_analysis.pdf",
+        "dashboard": "dashboard_zeolite.html"
+    },
+    {
+        "name": "Stock-Price Analysis",
+        "description": "Personal project for analysis of financial stock prices.",
+        "tools": "Python, Pandas, Matplotlib, Bash",
+        "skills": "Data analysis, comparison, time-series visualization",
+        "link": "",
+        "project_page": "projeto_stock.html",
+        "pdf": "docs/stock_analysis.pdf",
+        "dashboard": "dashboard_stock.html"
+    },
+    {
+        "name": "Homeless Population Analysis",
+        "description": "Data Analysis of homeless population in Belo Horizonte, MG.",
+        "tools": "Python, Jupyter Notebook, Bash",
+        "skills": "Social data analysis, statistics, data visualization",
+        "link": "",
+        "project_page": "projeto_homeless.html",
+        "pdf": "docs/homeless_analysis.pdf",
+        "dashboard": "dashboard_homeless.html"
+    },
+    {
+        "name": "Grocery Sale and Pricing",
+        "description": "Analysis of grocery sales data, pricing strategies, and market trends.",
+        "tools": "Python, Pandas, Plotly, SQL",
+        "skills": "Sales analytics, pricing optimization, market basket analysis",
+        "link": "",
+        "project_page": "projeto_grocery.html",
+        "pdf": "docs/grocery_analysis.pdf",
+        "dashboard": "dashboard_grocery.html"
+    }
 ]

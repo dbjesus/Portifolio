@@ -3,135 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Daniel de Jesus: Em construcao</title>
+    <title>Daniel de Jesus: Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header style="text-align: left">
-    <h1>
-        Daniel Batista de Jesus
-        <p style="font-size: 1rem; margin-top: 10px;">
-            PhD. Candidate, Master and Bachelor in Physics
-        </p>
-        <p style="font-size: 1rem; margin-top: 10px;">
-            Science, Data, Analysis, Intelectual Property and Other Stuffs
-        </p>
-    </h1>
+        <h1>
+            Daniel Batista de Jesus
+            <p style="font-size: 1rem; margin-top: 10px;">
+                PhD. Candidate, Master and Bachelor in Physics
+            </p>
+            <p style="font-size: 1rem; margin-top: 10px;">
+                Science, Data, Analysis, Intellectual Property and Other Stuffs
+            </p>
+        </h1>
 
-    <div style="margin-top: 20px;">
-        <input type="text" placeholder="Busca de informação">
-        <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
-    </div>
-</header>
+        <div style="margin-top: 20px;">
+            <input type="text" id="campo-busca" placeholder="Buscar por Python, RNA, ESR, etc.">
+            <button id="botao-busca">Buscar</button>
+        </div>
+    </header>
 
-    
     <main>
+        <!-- ===================================================== -->
+        <!-- PROJETO 1: Stability of modified RNA e DNA -->
+        <!-- ===================================================== -->
         <section class="card-container">
             <h1>Stability of modified RNA e DNA</h1>
             <p>Application of Mesoscopic Statistical Model and Data Analysis of methylated sequences</p>
-            <p>Gathering, conditioning, Treatment and Analysis of data pulbished in articles and scitific magazines. </p>
-            <article class="card">
-                <h2>RNA</h2>
-                <h3> 2'-o-methylribose(NM)</h3>
-                <h3> 6 methyl Adenine(6mA)</h3>
-                <h2>DNA</h2>
-                <h3> 5 methyl Cytosine(5mC)</h3>
-                <h3> 5 hydroxymethyl Cytosine(5hmC)</h3>
-                <h3> 6 methyl Adenine(6mA)</h3>
-                <h3> 1 methyl Adenine(1mA)</h3>
-                <h3> 1 methyl Guanine(1mA)</h3>
-                <h3> 3 methyl Thymine(3mT)</h3>
-                <h3></h3>
-                <p>Tools: Python, Bash, Shell Script</p>
-                <p>Skills:English, presentations, data visualization, analytics, comparison, reading, writing</p>
-                <a href="https://sites.google.com/site/geraldweberufmg/group">Gerald Weber Group</a>
+            <p>Gathering, conditioning, Treatment and Analysis of data published in articles and scientific magazines.</p>
+            
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/pb_placeholder.png" alt="RNA Structure" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3ERNA%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>RNA</h2>
+                    <h3>2'-o-methylribose (NM)</h3>
+                    <h3>6 methyl Adenine (6mA)</h3>
+                    <h2>DNA</h2>
+                    <h3>5 methyl Cytosine (5mC)</h3>
+                    <h3>5 hydroxymethyl Cytosine (5hmC)</h3>
+                    <h3>6 methyl Adenine (6mA)</h3>
+                    <h3>1 methyl Adenine (1mA)</h3>
+                    <h3>1 methyl Guanine (1mG)</h3>
+                    <h3>3 methyl Thymine (3mT)</h3>
+                    <p><strong>Tools:</strong> Python, Bash, Shell Script</p>
+                    <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, reading, writing</p>
+                    <div class="card-buttons">
+                        <a href="projeto_rna.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/rna_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_rna.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="https://sites.google.com/site/geraldweberufmg/group" class="btn btn-link" target="_blank">🔗 Grupo</a>
+                    </div>
+                </div>
             </article>
         </section>
-        <section class="card-container"></section>
-            <h1>Defects generation, radical detection, characterization of materials</h1>
-             <article class="card">
-                <h2>Dissertation: Poisoning of Zeolite Catalysts by Fe</h2>
-                <p>FCC catalysts treated by artificial Poisoning process in laboratory</p>
-                <p>Tools: Electron Spin Resonance(ESR), Raman and Mossbauer Spectroscopy, Magnetic Hysteresis</p>
-                <p>Skills: English, presentations, comunication, data visualization, analytics, comparison, reading, writing</p>
-                <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/">Klaus Krambrock Group</a>
-            </article>
-            <article class="card">
-                <h2>
-                    Generation and control of defects in materials matrix of hexagonal boron nitride using neutro radiation
-                    <p>
-                        Commercial hexagonal Boron Nitride irradiated with neutrons and ionized wih gama radiation
-                    </p>
-                    <p>
-                        Detection and characterization via ESR, X-ray Difraction, Infra-Red Spectroscopy(IR),
-                        Heat Treatments using Industrial Oven. 
-                    </p>
-                </h2>
-                <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.155203"> Electron paramagnetic resonance signature
-of point defects in neutron-irradiated hexagonal boron nitride</a>
-                <h2>Characterization of radicals generated with catalysts and stimulaed using UVS/UVL-Vis light</h2>
-                <a href="https://www.mdpi.com/2079-6447/4/2/14"> Methylene Blue as a Sensitizing Dye: Enhancement of the Photocatalytic
-Performance of a Peroxide-Functionalized Iron Molybdate by the Antenna Effect</a>
-                <h2>Sintheseis protocol to g-C3N4 production</h2>
-                <p>
-                    unpublished
-                </p>
-                <p>
-                    Tools: ESR(EPR), Fotoluminescencia(PL), Espectroscopia Raman
-                </p>
-                <p>Skills: English, presentations, data visualization, analytics, comparison, writing, reading</p>
-                <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/">Klaus Krambrock Group</a>
-            </article>
-        </section>
-        <section class="card-container"></section>
-        <h1>Personal Projects</h1>
-            <article class="card">
-                <h2>Stock-Price</h2>
-                <p>
-                    Stock-Price Analysis</p>
-                <p>Tools: Python, Bash, Shell Script</p>
-                <p>Skills: English, presentations, data visualization, analytics, comparison, writing, reading</p>
-            </article>
 
-            <article class="card">
-                <h2>Homeless Population Analysis</h2>
-                <p>
-                    Data Analysis of homeless population in Belo Horizonte, MG</p>
-                <p>Tools: Python, Bash, Shell Script</p>
-                <p>Skills: English, presentations, data visualization, analytics, comparison, writing, reading</p>
-            </article>
-
-            <article class="card">
-                <h2>Grocery Sales and Pricing Analysis</h2>
-                <p>
-                   Extraction, Analysis and Visualization of Grocery Sales and Pricing of Belo Horizonte, MG</p>
-                <p>Tools: Python, HTML, CSS, JavaScript</p>
-                <p>Skills: English, presentations, data visualization, analytics, comparison, writing, reading</p>
-            </article>
-
-        </section>
+        <!-- ===================================================== -->
+        <!-- PROJETO 2: Defects generation, radical detection -->
+        <!-- ===================================================== -->
         <section class="card-container">
-            <h1>
-                Future Projects
-            </h1>
-            <article class="card">
-                Recycling Bateries
+            <h1>Defects generation, radical detection, characterization of materials</h1>
+            
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/zeolite_placeholder.png" alt="Zeolite Catalyst" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3EZSM-5%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Dissertation: Poisoning of Zeolite Catalysts by Fe</h2>
+                    <p>FCC catalysts treated by artificial Poisoning process in laboratory</p>
+                    <p><strong>Tools:</strong> Electron Spin Resonance (ESR), Raman and Mossbauer Spectroscopy, Magnetic Hysteresis</p>
+                    <p><strong>Skills:</strong> English, presentations, communication, data visualization, analytics, comparison, reading, writing</p>
+                    <div class="card-buttons">
+                        <a href="projeto_zeolite.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/zeolite_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_zeolite.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/" class="btn btn-link" target="_blank">🔗 Grupo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/hbn_placeholder.jpg" alt="h-BN Structure" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Eh-BN%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Generation and control of defects in hexagonal boron nitride</h2>
+                    <p>Commercial hexagonal Boron Nitride irradiated with neutrons and ionized with gamma radiation</p>
+                    <p>Detection and characterization via ESR, X-ray Diffraction, Infra-Red Spectroscopy (IR), Heat Treatments using Industrial Oven.</p>
+                    <p><strong>Tools:</strong> ESR, XRD, IR, Heat Treatment</p>
+                    <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, writing, reading</p>
+                    <div class="card-buttons">
+                        <a href="projeto_hbn.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/hbn_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_hbn.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.155203" class="btn btn-link" target="_blank">🔗 Artigo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/catalyst_placeholder.png" alt="Catalyst" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3ECatalyst%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Characterization of radicals with catalysts</h2>
+                    <p>Characterization of radicals generated with catalysts and stimulated using UVS/UVL-Vis light</p>
+                    <p><strong>Tools:</strong> ESR/EPR, Photoluminescence (PL), Raman Spectroscopy</p>
+                    <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, writing, reading</p>
+                    <div class="card-buttons">
+                        <a href="projeto_radicals.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/radicals_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_radicals.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="https://www.mdpi.com/2079-6447/4/2/14" class="btn btn-link" target="_blank">🔗 Artigo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/gcn4_placeholder.png" alt="g-C3N4" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Eg-C3N4%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Synthesis protocol to g-C3N4 production</h2>
+                    <p>unpublished</p>
+                    <p><strong>Tools:</strong> ESR/EPR, Photoluminescence (PL), Raman Spectroscopy</p>
+                    <p><strong>Skills:</strong> English, presentations, data visualization, analytics, comparison, writing, reading</p>
+                    <div class="card-buttons">
+                        <a href="projeto_gcn4.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="#" class="btn btn-secondary" target="_blank">📑 PDF (em breve)</a>
+                        <a href="dashboard_gcn4.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/" class="btn btn-link" target="_blank">🔗 Grupo</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- PROJETOS PESSOAIS (com 3 novos projetos) -->
+        <!-- ===================================================== -->
+        <section class="card-container">
+            <h1>Personal Projects</h1>
+            
+            <!-- Stock-Price Analysis -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/stock_placeholder.png" alt="Stock Market" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3EStock%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Stock-Price Analysis</h2>
+                    <p>Stock-Price Analysis of financial markets</p>
+                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib, Bash</p>
+                    <p><strong>Skills:</strong> Data analysis, time-series visualization, financial analytics</p>
+                    <div class="card-buttons">
+                        <a href="projeto_stock.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/stock_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_stock.html" class="btn btn-dashboard">📊 Dashboard</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Homeless Population Analysis -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/homeless_placeholder.png" alt="Homeless Population" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3ESocial%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Homeless Population Analysis</h2>
+                    <p>Data Analysis of homeless population in Belo Horizonte, MG</p>
+                    <p><strong>Tools:</strong> Python, Jupyter Notebook, Bash</p>
+                    <p><strong>Skills:</strong> Social data analysis, statistics, data visualization</p>
+                    <div class="card-buttons">
+                        <a href="projeto_homeless.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/homeless_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_homeless.html" class="btn btn-dashboard">📊 Dashboard</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Grocery Sales and Pricing Analysis -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/grocery_placeholder.png" alt="Grocery Sales" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3EGrocery%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Grocery Sales and Pricing Analysis</h2>
+                    <p>Extraction, Analysis and Visualization of Grocery Sales and Pricing of Belo Horizonte, MG</p>
+                    <p><strong>Tools:</strong> Python, Pandas, Plotly, SQL</p>
+                    <p><strong>Skills:</strong> Sales analytics, pricing optimization, market basket analysis</p>
+                    <div class="card-buttons">
+                        <a href="projeto_grocery.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/grocery_analysis.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_grocery.html" class="btn btn-dashboard">📊 Dashboard</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOVO: friend.ia -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/friend_ia_placeholder.png" alt="friend.ia" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Efriend.ia%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>🤖 friend.ia</h2>
+                    <p>Intelligent conversational agent for hard task support. Evolutive analysis. Uses advanced Generative AI to develop high quality responses.</p>
+                    <p><strong>Tools:</strong> Python, FastAPI, React, SQL</p>
+                    <p><strong>Skills:</strong> NLP, LLM fine-tuning, prompt engineering, API development, conversational AI</p>
+                    <div class="card-buttons">
+                        <a href="projeto_friend_ia.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/friend_ia.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_friend_ia.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="#" class="btn btn-link">🔗 Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOVO: soundsapp -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/soundsapp_placeholder.png" alt="soundsapp" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Esoundsapp%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>🎵 soundsapp</h2>
+                    <p>Generating music from text.</p>
+                    <p><strong>Tools:</strong> Python, Generative AI</p>
+                    <p><strong>Skills:</strong> Prompt engine</p>
+                    <p><strong>Process:</strong> Scraping streaming</p>
+                    <div class="card-buttons">
+                        <a href="projeto_soundsapp.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/soundsapp.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_soundsapp.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="#" class="btn btn-link">🔗 Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOVO: dr.ia -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/dr_ia_placeholder.png" alt="dr.ia" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Edr.ia%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>👨‍⚕️ dr.ia</h2>
+                    <p>Web service and tools for analysis of personal context in justice department</p>
+                    <p><strong>Tools:</strong> Python, bash, shell</p>
+                    <p><strong>Skills:</strong> Data analysis, data science, extraction fof data</p>
+                    <div class="card-buttons">
+                        <a href="projeto_dr_ia.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/dr_ia.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_dr_ia.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="#" class="btn btn-link">🔗 Demo</a>
+                    </div>
+                </div>
+            </article>
+             <!-- NOVO: dr.ia -->
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/spm_placeholder.png" alt="dr.ia" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3Edr.ia%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Superparamagnetic Simulation</h2>
+                    <p>Simulated Anealing applied to determination of nanosized superparamagnetic ensemble of particles</p>
+                    <p><strong>Tools:</strong> C++, Python, SQUID</p>
+                    <p><strong>Skills:</strong> Medical AI, NLP, diagnostic algorithms, data privacy, clinical decision support</p>
+                    <p><strong>Partners:</strong> Luciano Lara and Gabriel Albuquerque</p>
+                    <div class="card-buttons">
+                        <a href="projeto_spm_simulation.html" class="btn btn-primary">📄 Ver Projeto</a>
+                        <a href="docs/spm_simulation.pdf" class="btn btn-secondary" target="_blank">📑 PDF</a>
+                        <a href="dashboard_spm_simulation.html" class="btn btn-dashboard">📊 Dashboard</a>
+                        <a href="#" class="btn btn-link">🔗 Demo</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- FUTURE PROJECTS -->
+        <!-- ===================================================== -->
+        <section class="card-container">
+            <h1>Future Projects</h1>
+            <article class="card card-with-image">
+                <div class="card-image">
+                    <img src="img/battery_placeholder.png" alt="Battery Recycling" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%232a2a2a\'/%3E%3Ctext x=\'75\' y=\'75\' text-anchor=\'middle\' fill=\'%239aa0a6\' font-size=\'12\'%3EBattery%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="card-content">
+                    <h2>Recycling Batteries</h2>
+                    <p>Project for sustainable recycling of lithium-ion batteries</p>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">📄 Em breve</a>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
+
     <footer class="footer">
         <ul class="footer-links">
-            <li>
-                <a href="https://github.com/dbjesus">GitHub</a>
-            </li>
-            <li>
-                <a href="https://sites.google.com/site/geraldweberufmg/group">Grupo Doutorado</a>
-            </li>
-            <li>
-                <a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/">Grupo Mestrado</a>
-            </li>
+            <li><a href="https://github.com/dbjesus">GitHub</a></li>
+            <li><a href="https://sites.google.com/site/geraldweberufmg/group">Grupo Doutorado</a></li>
+            <li><a href="https://www.fisica.ufmg.br/laboratorios/laboratorio-de-ressonancia-magnetica/">Grupo Mestrado</a></li>
         </ul>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
