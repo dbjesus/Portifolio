@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre a Metilação das Bases Nitrogenadas | Daniel Batista de Jesus</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #1a3a6b;
+      --accent-light: #2e5caa;
+      --border: #d0d0d0;
+      --nav-width: 220px;
+      --mono: 'JetBrains Mono', monospace;
+      --serif: 'EB Garamond', Georgia, serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    nav {
+      width: var(--nav-width);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background: #fafafa;
+    }
+
+    nav .nav-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav a {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 3px;
+      transition: color 0.2s, background 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      background: #eef2f9;
+    }
+
+    nav .nav-spacer {
+      flex: 1;
+    }
+
+    nav .nav-footer {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: #aaa;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      margin-left: var(--nav-width);
+      max-width: 760px;
+      padding: 4rem 3rem 6rem;
+      width: 100%;
+    }
+
+    .doc-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 2.5rem 0 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    .figure-block {
+      margin: 2.5rem 0;
+      border: 1px solid var(--border);
+    }
+
+    .figure-block img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .figure-caption {
+      padding: 0.75rem 1rem;
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .figure-caption .fig-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <nav>
+    <div class="nav-title">Navegação</div>
+
+    <a href="#resumo">Resumo</a>
+    <a href="#texto">Texto</a>
+    <a href="#conclusao">Conclusão</a>
+
+    <div class="nav-spacer"></div>
+
+    <a href="https://dbjesus.github.io/Portifolio/" target="_blank">
+      ← Portfólio
+    </a>
+
+    <div class="nav-footer" style="margin-top:0.75rem;">
+      D. B. Jesus · 2026
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <div class="doc-label">
+      BIOFÍSICA · ESQUELETO
+    </div>
+
+    <h1>Sobre a Modificações Na Estrutura do Esqueleto</h1>
+
+    <p class="subtitle">
+      Estrutura eletrônica, barreiras rotacionais e efeitos estéricos e estruturais
+    </p>
+
+    <!-- ======================================================= -->
+    <!-- RESUMO -->
+    <!-- ======================================================= -->
+
+    <h2 id="resumo">Resumo</h2>
+
+    <p>
+      Loading ...
+    </p>
+
+    <!-- ======================================================= -->
+    <!-- TEXTO -->
+    <!-- ======================================================= -->
+
+    <h2 id="texto">Texto</h2>
+
+    <p>
+      Loanding...
+    </p>
+
+    <p>
+      Loanding...
+    </p>
+
+    <p>
+      Loanding...
+    </p>
+
+    <p>
+      Loanding...
+
+    <!-- ======================================================= -->
+    <!-- FIGURA COMENTADA -->
+    <!-- ======================================================= -->
+
+
+    <div class="figure-block">
+      <img src="img/amino_keto.png" alt="Tautômeros das bases nitrogenadas">
+
+      <div class="figure-caption">
+        <span class="fig-label">Figura 1</span>
+
+        <p>
+          Estrutura molecular dos tautomeros. Diferentes posições dos grupos H e transição Amino-Iminio e Keto-Enol.
+        </p>
+      </div>
+    </div>
+
+
+    <!--
+    <div class="figure-block">
+      <img src="caminho/da/imagem2.png" alt="Descrição da figura">
+
+      <div class="figure-caption">
+        <span class="fig-label">Figura 2</span>
+
+        <p>
+          Representação esquemática da barreira rotacional associada ao grupo amino.
+        </p>
+      </div>
+    </div>
+    -->
+
+    <!-- ======================================================= -->
+    <!-- CONCLUSÃO -->
+    <!-- ======================================================= -->
+
+    <h2 id="conclusao">Conclusão e conexão com as modificações</h2>
+
+    <p>
+      Sobre modificações no esqueleto
+    </p>
+    <p>
+    Descrição
+    </p>
+    <div class="references">
+      <h2 style="margin-top:0; margin-bottom:1rem;">Referências</h2>
+      <ul>
+        <li>Saenger, Wolfram.  <em>Principles of nucleic acid structure</em>.pp. 9-28. New York, NY: Springer New York, 1984.</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <p style="
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 2rem;
+    ">
+      © 2026 Daniel Batista de Jesus<br/>
+      Documento estruturado para inserção de figuras e expansão futura do texto.
+    </p>
+
+  </main>
+
+</div>
+
+</body>
+</html>
