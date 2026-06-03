@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre as Modificações Na Estrutura do Esqueleto | Daniel Batista de Jesus</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #1a3a6b;
+      --accent-light: #2e5caa;
+      --border: #d0d0d0;
+      --border-fig: #c8d4e8;
+      --fig-bg: #f4f7fc;
+      --nav-width: 220px;
+      --text-width: 1130px;
+      --mono: 'JetBrains Mono', monospace;
+      --serif: 'EB Garamond', Georgia, serif;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── Layout raiz ── */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Nav fixa ── */
+    nav {
+      width: var(--nav-width);
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background: #fafafa;
+      z-index: 10;
+    }
+    nav .nav-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 3px;
+      transition: color 0.2s, background 0.2s;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { color: var(--accent); background: #eef2f9; }
+    nav .nav-spacer { flex: 1; }
+    nav .nav-footer {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: #aaa;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Área depois da nav: duas colunas independentes ── */
+    .page-body {
+      margin-left: var(--nav-width);
+      display: flex;
+      flex: 1;
+      align-items: flex-start;
+    }
+
+    /* Coluna de texto: largura fixa, igual ao original */
+    .text-col {
+      width: var(--text-width);
+      flex-shrink: 0;
+      padding: 4rem 3rem 6rem;
+      border-right: 1px solid var(--border);
+    }
+
+    /* Coluna de figuras: ocupa todo o resto */
+    .fig-col {
+      flex: 1;
+      padding: 4rem 2rem 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* ── Tipografia ── */
+    .doc-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .subtitle {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 2.5rem 0 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    /* ── Links para figuras ── */
+    a.fig-ref {
+      color: var(--accent-light);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--accent-light);
+      font-style: italic;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    a.fig-ref:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── Figuras na coluna direita ── */
+    .margin-fig {
+      border: 1px solid var(--border-fig);
+      border-radius: 5px;
+      background: var(--fig-bg);
+      overflow: hidden;
+      scroll-margin-top: 5rem;
+      transition: box-shadow 0.2s;
+    }
+    .margin-fig:target {
+      box-shadow: 0 0 0 2px var(--accent-light);
+    }
+
+    /* Placeholder quando a imagem ainda não existe */
+    .fig-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #e2eaf5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      border-bottom: 1px solid var(--border-fig);
+    }
+    .fig-placeholder svg { opacity: 0.3; }
+    .fig-placeholder span {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Quando a imagem real existir:
+       <img src="img/arquivo.png" alt="..."> substitui o placeholder inteiro */
+
+    .fig-caption {
+      padding: 0.8rem 1rem 0.9rem;
+    }
+    .fig-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+    .fig-title {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.35rem;
+    }
+    .fig-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.55;
+      font-style: italic;
+      margin: 0;
+      text-align: left;
+    }
+
+    /* ── Referências ── */
+    .references {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .references ul { list-style: none; padding: 0; }
+    .references li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .references li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #bbb;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ══ Sidebar ══ -->
+  <nav>
+    <div class="nav-title">Navegação</div>
+    <a href="#resumo">Resumo</a>
+    <a href="#texto">Sugar Puckering</a>
+    <a href="#pseudorot">Pseudorotação</a>
+    <a href="#conclusao">Conclusão</a>
+    <div class="nav-spacer"></div>
+    <a href="https://dbjesus.github.io/Portifolio/" target="_blank">← Portfólio</a>
+    <div class="nav-footer" style="margin-top:0.75rem;">D. B. Jesus · 2026</div>
+  </nav>
+
+  <!-- ══ Corpo da página ══ -->
+  <div class="page-body">
+
+    <!-- ════ COLUNA DE TEXTO (largura original) ════ -->
+    <div class="text-col">
+
+      <div class="doc-label">BIOFÍSICA · ESQUELETO</div>
+      <h1>Sobre as Modificações Na Estrutura do Esqueleto</h1>
+      <p class="subtitle">
+        Estrutura eletrônica, barreiras rotacionais e efeitos estéricos e estruturais
+      </p>
+
+      <!-- RESUMO -->
+      <h2 id="resumo">Resumo</h2>
+      <p>
+        A longa jornada em busca do entendimento da influência das conformações da ribose na
+        estrutura do RNA perpassa pelo entendimento da definição de ângulo de torção e
+        pseudorotação estabelecida na década de 1947. Como será discutido, esta definição foi
+        feita por Kilpatrick e colaboradores em relação às posições e deslocamentos dos átomos
+        de carbono do anel, enquanto Altona (1972) trata de ângulos. Apesar do trabalho de
+        Altona ser amplamente referenciado por tratar de torções em ângulos, o trabalho seminal
+        fora feito por Kilpatrick. Duas abordagens são referenciadas, ambas com formalismo muito
+        semelhante e com a definição de fase — desenvolvida para o entendimento das possíveis
+        orientações do ciclopentano.
+      </p>
+      <p>
+        No anel ciclopentano, as forças de torção em torno das ligações estão em oposição às
+        forças que tendem a manter a conformação planar tetraédrica e dão origem à conformação
+        com átomos projetados para fora do plano [1]. Os átomos nesta situação —
+        <em>puckered ring</em> — estão organizados numa conformação de menor energia em
+        comparação com a não retorcida [1].
+      </p>
+
+      <!-- SUGAR PUCKERING -->
+      <h2 id="texto">Sugar Puckering</h2>
+      <p>
+        No anel simétrico, as diferenças entre as posições dos átomos são pequenas, mas
+        suficientes para dar origem ao <em>sugar puckering</em> [1][2][3]. Duas conformações de
+        menor energia são possíveis para o anel de cinco membros: a conformação
+        <em>envelope</em> e a conformação <em>twist</em> [2]. Na molécula de açúcar, onde
+        existem substituintes, as interações entre estes grupos e a sobreposição entre eles
+        causam maior torção da molécula e maior desvio em relação à estrutura planar [2].
+        O conjunto completo de estados acessíveis ao anel pode ser visualizado no
+        <a href="#fig1" class="fig-ref">espaço de conformações</a>,
+        que organiza as geometrias possíveis em função dos parâmetros de amplitude e fase.
+      </p>
+      <p>
+        Existe uma predominância das projeções dos átomos de carbono na direção do carbono C5'
+        da ribose. Os carbonos das posições 2' e 3', quando a ribose se encontra na conformação
+        <em>twist</em>, podem estar projetados na direção da ligação C4'–C5' ou na direção
+        oposta, denominada <em>exo</em>. Desta forma, eles se encontram nas posições
+        C2'-<em>endo</em>–C3'-<em>exo</em> ou C2'-<em>exo</em>–C3'-<em>endo</em>, comumente
+        chamadas C2'-<em>endo</em> e C3'-<em>endo</em>, respectivamente [2]. Estas duas
+        conformações existem em equilíbrio [2][3]; porém, a transição entre as mesmas não passa
+        pela estrutura planar do anel, e sim por um arranjo mais complexo [2][3]. A distribuição
+        experimental de energia ao longo deste equilíbrio está registrada no
+        <a href="#fig2" class="fig-ref">panorama energético experimental</a>.
+      </p>
+
+      <!-- PSEUDOROTAÇÃO -->
+      <h2 id="pseudorot">Ângulos de Pseudorotação</h2>
+      <p>
+        Este conceito foi desenvolvido para a descrição dos estados conformacionais dos anéis de
+        ciclopentano [1], mas encontrou grande aplicação em ácidos nucleicos, especialmente na
+        descrição das conformações de riboses [2][3]. Define-se um ângulo de fase P que assume
+        os valores de 0° e 180° quando os ângulos μ₂ e μ₃ assumem valores máximos,
+        respectivamente [2]. Estas são as condições C2'-<em>endo</em> e C3'-<em>endo</em>,
+        respectivamente.
+      </p>
+      <p>
+        Dado o ângulo de fase P, os ângulos de torção se relacionam por
+        ν<sub>i</sub> = ν<sub>max</sub> cos(P + j·f), onde j é o índice que representa o
+        ângulo (de 0 a 4) e f é a fração de ângulo 720°/5 = 144°. Esta definição supõe
+        deformações harmônicas compatíveis com a geometria da molécula. A correspondência entre
+        estes valores teóricos e os dados computacionais está ilustrada no
+        <a href="#fig3" class="fig-ref">panorama energético teórico</a>.
+      </p>
+      <p>
+        [Texto adicional a ser inserido aqui.]
+      </p>
+
+      <!-- CONCLUSÃO -->
+      <h2 id="conclusao">Conclusão e Conexão com as Modificações</h2>
+      <p>
+        [Sobre modificações no esqueleto — descrição a ser expandida.]
+      </p>
+      <p>
+        [Descrição das implicações conformacionais para as modificações químicas estudadas.]
+      </p>
+
+      <!-- REFERÊNCIAS -->
+      <div class="references">
+        <h2 style="margin-top:0; margin-bottom:1rem;">Referências</h2>
+        <ul>
+          <li>[1] John E. Kilpatrick, Kenneth S. Pitzer and Ralph Spitzer. <em>The Thermodynamics and Molecular Structure of Cyclopentane.</em> 1947.</li>
+          <li>[2] Saenger, Wolfram. <em>Principles of Nucleic Acid Structure.</em> pp. 9–28. New York: Springer, 1984.</li>
+          <li>[3] Neidle, Stephen. <em>[Título a confirmar].</em></li>
+          <li>[4] C. Altona and M. Sundaralingam. <em>Conformational Analysis of the Sugar Ring in Nucleosides and Nucleotides. A New Description Using the Concept of Pseudorotation.</em> 1972.</li>
+        </ul>
+      </div>
+
+      <hr/>
+      <p style="font-family:var(--mono);font-size:0.7rem;color:#aaa;text-align:center;margin-top:2rem;">
+        © 2026 Daniel Batista de Jesus<br/>
+        Documento estruturado para inserção de figuras e expansão futura do texto.
+      </p>
+
+    </div><!-- /text-col -->
+
+    <!-- ════ COLUNA DE FIGURAS (ocupa o resto da página) ════ -->
+    <div class="fig-col">
+
+      <!-- Figura 1 -->
+      <figure class="margin-fig" id="fig1">
+        <div class="fig-placeholder">
+          <!--
+            Para inserir a imagem real, substitua este <div class="fig-placeholder"> pelo tag:
+            <img src="img/espaco_conformacoes.png" alt="Espaço de conformações da ribose">
+          -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="26" stroke="#1a3a6b" stroke-width="1.4" stroke-dasharray="4 3"/>
+            <circle cx="32" cy="32" r="14" stroke="#1a3a6b" stroke-width="1" stroke-dasharray="2 2"/>
+            <line x1="32" y1="6"  x2="32" y2="58" stroke="#1a3a6b" stroke-width="0.8" stroke-dasharray="2 2"/>
+            <line x1="6"  y1="32" x2="58" y2="32" stroke="#1a3a6b" stroke-width="0.8" stroke-dasharray="2 2"/>
+            <circle cx="32" cy="6"  r="3.5" fill="#2e5caa"/>
+            <circle cx="57" cy="21" r="3.5" fill="#2e5caa"/>
+            <circle cx="49" cy="53" r="3.5" fill="#2e5caa"/>
+            <circle cx="15" cy="53" r="3.5" fill="#2e5caa"/>
+            <circle cx="7"  cy="21" r="3.5" fill="#2e5caa"/>
+          </svg>
+          <span>imagem a inserir</span>
+        </div>
+        <figcaption class="fig-caption">
+          <span class="fig-label">Figura 1</span>
+          <span class="fig-title">Espaço de conformações</span>
+          <p class="fig-desc">
+            [Descrição: representação do espaço conformacional da ribose, indicando as regiões
+            de C2'-<em>endo</em> e C3'-<em>endo</em> e os caminhos de interconversão ao longo
+            do ângulo de pseudorotação P. Fonte: a inserir.]
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- Figura 2 -->
+      <figure class="margin-fig" id="fig2">
+        <div class="fig-placeholder">
+          <!--
+            <img src="img/panorama_exp.png" alt="Panorama energético experimental das conformações da ribose">
+          -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="8" y1="54" x2="58" y2="54" stroke="#1a3a6b" stroke-width="1"/>
+            <line x1="8" y1="8"  x2="8"  y2="54" stroke="#1a3a6b" stroke-width="1"/>
+            <polyline points="8,48 16,38 24,42 32,22 40,28 48,14 56,20"
+              stroke="#2e5caa" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="32" cy="22" r="3" fill="#2e5caa"/>
+            <circle cx="48" cy="14" r="3" fill="#2e5caa"/>
+          </svg>
+          <span>imagem a inserir</span>
+        </div>
+        <figcaption class="fig-caption">
+          <span class="fig-label">Figura 2</span>
+          <span class="fig-title">Panorama energético experimental das conformações da ribose</span>
+          <p class="fig-desc">
+            [Descrição: perfil de energia livre experimental em função do ângulo de
+            pseudorotação P, obtido a partir de dados de RMN ou cristalografia.
+            Indicar os mínimos correspondentes a C2'-<em>endo</em> e C3'-<em>endo</em>.
+            Fonte: a inserir.]
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- Figura 3 -->
+      <figure class="margin-fig" id="fig3">
+        <div class="fig-placeholder">
+          <!--
+            <img src="img/panorama_teorico.png" alt="Panorama energético teórico — ângulo de pseudorotação">
+          -->
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="8" y1="54" x2="58" y2="54" stroke="#1a3a6b" stroke-width="1"/>
+            <line x1="8" y1="8"  x2="8"  y2="54" stroke="#1a3a6b" stroke-width="1"/>
+            <path d="M8,40 Q16,12 24,36 Q32,54 40,28 Q48,8 56,32"
+              stroke="#2e5caa" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="16" cy="18" r="3" fill="#2e5caa" opacity="0.55"/>
+            <circle cx="48" cy="12" r="3" fill="#2e5caa" opacity="0.55"/>
+            <text x="9"  y="60" font-family="monospace" font-size="6" fill="#777">0°</text>
+            <text x="44" y="60" font-family="monospace" font-size="6" fill="#777">360°</text>
+          </svg>
+          <span>imagem a inserir</span>
+        </div>
+        <figcaption class="fig-caption">
+          <span class="fig-label">Figura 3</span>
+          <span class="fig-title">Panorama energético teórico das conformações da ribose: ângulo de pseudorotação</span>
+          <p class="fig-desc">
+            [Descrição: perfil de energia calculado computacionalmente como função do ângulo de
+            pseudorotação P (0° a 360°), mostrando os mínimos em P ≈ 18° (C3'-<em>endo</em>)
+            e P ≈ 162° (C2'-<em>endo</em>). Método e nível de teoria a especificar.
+            Fonte: a inserir.]
+          </p>
+        </figcaption>
+      </figure>
+
+    </div><!-- /fig-col -->
+
+  </div><!-- /page-body -->
+</div><!-- /layout -->
+</body>
+</html>
