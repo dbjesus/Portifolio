@@ -81,29 +81,37 @@
       letter-spacing: 0.05em;
     }
 
-    /* ── Área depois da nav: duas colunas independentes ── */
+    /* ── Área depois da nav: duas colunas ── */
     .page-body {
       margin-left: var(--nav-width);
-      display: flex;
-      flex: 1;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      width: calc(100vw - var(--nav-width));
+      min-height: 100vh;
+      align-items: start;
     }
 
-    /* Coluna de texto: largura fixa, igual ao original */
+    /* Coluna de texto */
     .text-col {
-      width: var(--text-width);
-      flex-shrink: 0;
+      min-width: 0;
       padding: 4rem 3rem 6rem;
       border-right: 1px solid var(--border);
     }
 
-    /* Coluna de figuras: ocupa todo o resto */
+    /* Coluna de figuras */
     .fig-col {
-      flex: 1;
-      padding: 4rem 2rem 6rem;
+      min-width: 0;
+      padding: 4rem 1.5rem 6rem;
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
+    }
+
+    /* Imagens nunca transbordam a coluna */
+    .margin-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     /* ── Tipografia ── */
@@ -410,6 +418,7 @@
       <figure class="margin-fig" id="fig2">
         <div class="fig-placeholder">
           <!--
+            Para inserir a imagem real, substitua este <div class="fig-placeholder"> pelo tag:
             <img src="img/panorama_exp.png" alt="Panorama energético experimental das conformações da ribose">
           -->
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -436,20 +445,7 @@
 
       <!-- Figura 3 -->
       <figure class="margin-fig" id="fig3">
-        <div class="fig-placeholder">
-            <img src="img/ribose.svg.2026_05_28_22_49_35.0.svg" alt="Panorama energético teórico — ângulo de pseudorotação">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="8" y1="54" x2="58" y2="54" stroke="#1a3a6b" stroke-width="1"/>
-            <line x1="8" y1="8"  x2="8"  y2="54" stroke="#1a3a6b" stroke-width="1"/>
-            <path d="M8,40 Q16,12 24,36 Q32,54 40,28 Q48,8 56,32"
-              stroke="#2e5caa" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <circle cx="16" cy="18" r="3" fill="#2e5caa" opacity="0.55"/>
-            <circle cx="48" cy="12" r="3" fill="#2e5caa" opacity="0.55"/>
-            <text x="9"  y="60" font-family="monospace" font-size="6" fill="#777">0°</text>
-            <text x="44" y="60" font-family="monospace" font-size="6" fill="#777">360°</text>
-          </svg>
-          <span>imagem a inserir</span>
-        </div>
+        <img src="ribose.svg.2026_05_28_22_49_35.0.svg" alt="Panorama energético teórico — ângulo de pseudorotação">
         <figcaption class="fig-caption">
           <span class="fig-label">Figura 3</span>
           <span class="fig-title">Panorama energético teórico das conformações da ribose: ângulo de pseudorotação</span>
