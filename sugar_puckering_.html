@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sobre as Modificações Na Estrutura do Esqueleto | Daniel Batista de Jesus</title>
+  <title>Sobre Modificações no Esqueleto | Daniel Batista de Jesus</title>
 
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 
@@ -196,9 +196,6 @@
       text-transform: uppercase;
     }
 
-    /* Quando a imagem real existir:
-       <img src="img/arquivo.png" alt="..."> substitui o placeholder inteiro */
-
     .fig-caption {
       padding: 0.8rem 1rem 0.9rem;
     }
@@ -265,6 +262,7 @@
     <a href="#resumo">Resumo</a>
     <a href="#texto">Sugar Puckering</a>
     <a href="#pseudorot">Pseudorotação</a>
+    <a href="#energia">Considerações sobre energia</a>
     <a href="#conclusao">Conclusão</a>
     <div class="nav-spacer"></div>
     <a href="https://dbjesus.github.io/Portifolio/" target="_blank">← Portfólio</a>
@@ -274,32 +272,32 @@
   <!-- ══ Corpo da página ══ -->
   <div class="page-body">
 
-    <!-- ════ COLUNA DE TEXTO (largura original) ════ -->
+    <!-- ════ COLUNA DE TEXTO ════ -->
     <div class="text-col">
 
       <div class="doc-label">BIOFÍSICA · ESQUELETO</div>
-      <h1>Sobre as Modificações Na Estrutura do Esqueleto</h1>
+      <h1>Sobre Modificações no Esqueleto</h1>
       <p class="subtitle">
-        Estrutura eletrônica, barreiras rotacionais e efeitos estéricos e estruturais
+        Estrutura, barreiras e efeitos estéricos
       </p>
 
       <!-- RESUMO -->
       <h2 id="resumo">Resumo</h2>
       <p>
         A longa jornada em busca do entendimento da influência das conformações da ribose na
-        estrutura do RNA perpassa pelo entendimento da definição de ângulo de torção e
-        pseudorotação estabelecida na década de 1947. Como será discutido, esta definição foi
+        estrutura do RNA perpassa pela compreensão da definição de ângulo de torção e
+        pseudorotação estabelecida na década de 1940. Como será discutido, esta definição foi
         feita por Kilpatrick e colaboradores em relação às posições e deslocamentos dos átomos
-        de carbono do anel, enquanto Altona (1972) trata de ângulos. Apesar do trabalho de
-        Altona ser amplamente referenciado por tratar de torções em ângulos, o trabalho seminal
-        fora feito por Kilpatrick. Duas abordagens são referenciadas, ambas com formalismo muito
-        semelhante e com a definição de fase — desenvolvida para o entendimento das possíveis
-        orientações do ciclopentano.
+        de carbono do anel [1], enquanto Altona e Sundaralingam (1972) tratam de ângulos [4]. 
+        Apesar de o trabalho de Altona ser amplamente referenciado por tratar de torções em ângulos, 
+        o trabalho seminal foi realizado por Kilpatrick [1]. Duas abordagens são referenciadas, 
+        ambas com formalismo muito semelhante e com a definição de fase — desenvolvida para o 
+        entendimento das possíveis orientações do ciclopentano.
       </p>
       <p>
         No anel ciclopentano, as forças de torção em torno das ligações estão em oposição às
         forças que tendem a manter a conformação planar tetraédrica e dão origem à conformação
-        com átomos projetados para fora do plano [1]. Os átomos nesta situação —
+        com átomos projetados para fora do plano [1]. Os átomos nesta situação retorcida —
         <em>puckered ring</em> — estão organizados numa conformação de menor energia em
         comparação com a não retorcida [1].
       </p>
@@ -308,67 +306,341 @@
       <h2 id="texto">Sugar Puckering</h2>
       <p>
         No anel simétrico, as diferenças entre as posições dos átomos são pequenas, mas
-        suficientes para dar origem ao <em>sugar puckering</em> [1][2][3]. Duas conformações de
-        menor energia são possíveis para o anel de cinco membros: a conformação
-        <em>envelope</em> e a conformação <em>twist</em> [2]. Na molécula de açúcar, onde
-        existem substituintes, as interações entre estes grupos e a sobreposição entre eles
-        causam maior torção da molécula e maior desvio em relação à estrutura planar [2].
-        O conjunto completo de estados acessíveis ao anel pode ser visualizado no
-        <a href="#fig1" class="fig-ref">espaço de conformações</a>,
-        que organiza as geometrias possíveis em função dos parâmetros de amplitude e fase.
+        suficientes para dar origem à estrutura retorcida (<em>sugar puckering</em>) [1][2][3]. 
+        Duas conformações de menor energia são possíveis para o anel de cinco membros: 
+        a conformação <em>envelope</em> (E) e a conformação <em>twist</em> (T) [2]. 
+        No anel simétrico, os átomos podem mudar suas posições, 
+        existindo um equilíbrio entre as projeções E e T. 
+        As conformações se misturam, com envelope em relação ao oxigênio e <em>twist</em> para carbonos.
       </p>
       <p>
-        Existe uma predominância das projeções dos átomos de carbono na direção do carbono C5'
-        da ribose. Os carbonos das posições 2' e 3', quando a ribose se encontra na conformação
-        <em>twist</em>, podem estar projetados na direção da ligação C4'–C5' ou na direção
-        oposta, denominada <em>exo</em>. Desta forma, eles se encontram nas posições
-        C2'-<em>endo</em>–C3'-<em>exo</em> ou C2'-<em>exo</em>–C3'-<em>endo</em>, comumente
-        chamadas C2'-<em>endo</em> e C3'-<em>endo</em>, respectivamente [2]. Estas duas
-        conformações existem em equilíbrio [2][3]; porém, a transição entre as mesmas não passa
-        pela estrutura planar do anel, e sim por um arranjo mais complexo [2][3]. A distribuição
-        experimental de energia ao longo deste equilíbrio está registrada no
-        <a href="#fig2" class="fig-ref">panorama energético experimental</a>.
+        Na molécula de açúcar, onde existem substituintes, 
+        as interações entre os grupos e a sobreposição causam maior torção da molécula e maior 
+        desvio em relação à estrutura planar, com predominância da conformação <em>twist</em> [2]. 
+        As conformações também são classificadas segundo as projeções em relação à ligação C4'–C5'. 
+        Átomos projetados na direção da ligação são classificados como <em>endo</em> e, na direção 
+        oposta, como <em>exo</em> [1][2][3][4]. A nomenclatura <em>endo-exo</em> é a mais geral 
+        e a mais utilizada. 
       </p>
+      <p>
+        Os carbonos das posições 2' e 3', quando a ribose se encontra na conformação <em>twist</em>, 
+        podem estar projetados na direção da ligação C4'–C5' ou na direção oposta, denominada <em>exo</em>. 
+        Desta forma, eles se encontram nas posições C2'-<em>endo</em>–C3'-<em>exo</em> ou 
+        C2'-<em>exo</em>–C3'-<em>endo</em>, comumente chamadas C2'-<em>endo</em> e C3'-<em>endo</em>, 
+        respectivamente [2]. Uma representação destas conformações é mostrada na 
+        Figura <a href="#fig1" class="fig-ref">1</a> (conformações <em>endo-exo</em>).
+        Estas duas conformações existem em equilíbrio no RNA [2][3].
+      </p>
+      <p>  
+        As amplitudes máximas de movimento dos átomos na molécula podem ser utilizadas para 
+        mapear as suas conformações. O conjunto completo de estados do anel pode ser visualizado 
+        na Figura <a href="#fig2" class="fig-ref">2</a> (espaço de conformações). 
+        Em seu trabalho, Kilpatrick mostra a existência de um estado retorcido intermediário entre 
+        os estados de menor energia que não corresponde à estrutura planar e hipotetiza que o 
+        caminho de menor energia passa por este estado intermediário [1]. O caminho proposto levou 
+        à descrição dos estados conformacionais do ciclopentano por meio do ângulo de 
+        pseudorotação [1][2][3][4][5][6].
+      </p>
+      
 
       <!-- PSEUDOROTAÇÃO -->
       <h2 id="pseudorot">Ângulos de Pseudorotação</h2>
       <p>
-        Este conceito foi desenvolvido para a descrição dos estados conformacionais dos anéis de
-        ciclopentano [1], mas encontrou grande aplicação em ácidos nucleicos, especialmente na
-        descrição das conformações de riboses [2][3]. Define-se um ângulo de fase P que assume
-        os valores de 0° e 180° quando os ângulos μ₂ e μ₃ assumem valores máximos,
-        respectivamente [2]. Estas são as condições C2'-<em>endo</em> e C3'-<em>endo</em>,
-        respectivamente.
+        Para descrever os estados conformacionais de ciclopentanos, foi desenvolvido o conceito 
+        de pseudorrotação por Kilpatrick e seu grupo em 1947 [1]. Esta definição encontrou grande 
+        aplicação em ácidos nucleicos, especialmente na descrição das conformações de riboses [2][3]. 
+        Ela parte da descrição das projeções dos átomos de carbono para fora do plano do anel [5].
+        O ângulo de pseudorrotação descreve os máximos nas projeções por meio de uma fase, 
+        que assume valores de 0° e 180° quando os ângulos μ₂ e μ₃ assumem valores máximos [1][2][3]. 
+        Estas são as condições C2'-<em>endo</em> e C3'-<em>endo</em>, respectivamente [2]. 
       </p>
       <p>
-        Dado o ângulo de fase P, os ângulos de torção se relacionam por
-        ν<sub>i</sub> = ν<sub>max</sub> cos(P + j·f), onde j é o índice que representa o
-        ângulo (de 0 a 4) e f é a fração de ângulo 720°/5 = 144°. Esta definição supõe
-        deformações harmônicas compatíveis com a geometria da molécula. A correspondência entre
-        estes valores teóricos e os dados computacionais está ilustrada no
-        <a href="#fig3" class="fig-ref">panorama energético teórico</a>.
+        Na definição de Altona e Sundaralingam [4], dado o ângulo de fase P, os ângulos de torção 
+        se relacionam por ν<sub>i</sub> = ν<sub>max</sub> cos(P + j·f), onde j é o índice que 
+        representa o ângulo (de 0 a 4) e f é a fração de ângulo 720°/5 = 144°. 
+        Com isto, tem-se uma descrição das deformações máximas em função da posição do átomo na 
+        molécula indexada pelo parâmetro ou ângulo de fase P. Quando P = 0, ν<sub>i</sub> é máximo 
+        para n·2(i-1) = 0, que ocorre na posição i = 0. Portanto, para P = 0, a deformação máxima 
+        se encontra no átomo indexado por i = 0. Podemos escolher uma fase tal que os máximos 
+        visitem diferentes pontos da ribose. Isto gera um mecanismo rotacional para o máximo e, 
+        em função disto, a fase P é chamada de ângulo de pseudorrotação. Esta definição supõe 
+        deformações harmônicas compatíveis com a geometria da molécula [1][4][5]. 
       </p>
       <p>
-        [Texto adicional a ser inserido aqui.]
+        Generalizações posteriores do formalismo foram propostas por Cremer e Pople (1975) [6][7] 
+        e aplicadas a anéis de cinco membros. A correspondência entre estes valores teóricos e 
+        os dados computacionais está ilustrada na Figura <a href="#fig3" class="fig-ref">3</a> 
+        (esquema de pseudorotação).
       </p>
+      <!-- ══ TABELA DE PSEUDOROTAÇÃO ══ -->
+<style>
+  .tbl-wrap {
+    margin: 2.5rem auto;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .tbl-formula {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    background: #f0f4fb;
+    border: 1px solid #c8d4e8;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0.45rem 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+  }
+  .tbl-legend {
+    font-size: 0.83rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  .tbl-legend code {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    background: #f0f0f0;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+  }
+  .pseudo-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+  .pseudo-table thead tr {
+    background: var(--accent);
+    color: #fff;
+  }
+  .pseudo-table thead th {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+    padding: 0.65rem 1.1rem;
+    text-align: center;
+    border: 1px solid #2e5caa;
+    white-space: nowrap;
+  }
+  .pseudo-table thead th.th-left { text-align: left; }
+  .pseudo-table tbody tr { border-bottom: 1px solid #e8e8e8; transition: background 0.15s; }
+  .pseudo-table tbody tr:hover { background: #f5f8ff; }
+
+  /* Células comuns */
+  .pseudo-table td {
+    border: 1px solid #e4e8f0;
+    padding: 0 0; /* controlado por tc abaixo */
+  }
+  .pseudo-table td.tc {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    text-align: center;
+    padding: 0.45rem 1.1rem;   /* ← espaçamento generoso entre colunas */
+    white-space: nowrap;
+  }
+  .pseudo-table td.p-val {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--accent);
+    text-align: center;
+    padding: 0.45rem 0.9rem;
+    white-space: nowrap;
+  }
+  .pseudo-table td.conf {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 0.45rem 1rem 0.45rem 0.75rem;
+    white-space: nowrap;
+  }
+  .pseudo-table td.maxatom {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--accent);
+    background: #eef2fb;
+    text-align: center;
+    padding: 0.45rem 1rem;
+  }
+
+  /* Cores dos valores */
+  .pseudo-table td.vmax { background: #1a3a6b; color: #fff; font-weight: 600; }
+  .pseudo-table td.vmin { background: #e8eef8; color: #1a3a6b; font-style: italic; }
+  .pseudo-table td.vpos { color: #1a5c2e; background: #f0faf3; }
+  .pseudo-table td.vneg { color: #7a1a1a; background: #fdf0f0; }
+  .pseudo-table td.vneu { color: #555; }
+
+  /* Tags de região */
+  span.region {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  span.north { background: #ddeeff; color: #1a3a6b; }
+  span.south { background: #fde8e8; color: #7a1a1a; }
+  span.east  { background: #e8f5e9; color: #1a5c2e; }
+  span.west  { background: #fff3e0; color: #7a4a00; }
+
+  .tbl-note {
+    margin-top: 1rem;
+    font-size: 0.83rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 0.9rem;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="tbl-wrap">
+  <div class="tbl-formula">ν<sub>i</sub> = ν<sub>max</sub> cos( P + i · 144° )</div>
+  <p class="tbl-legend">
+    <code>i = 0…4</code> indexa os átomos na convenção de Altona (1972):
+    <code>i=0 → C4'</code>, <code>i=1 → O4'</code>, <code>i=2 → C1'</code>,
+    <code>i=3 → C2'</code>, <code>i=4 → C3'</code>.
+    Valores normalizados com <code>ν<sub>max</sub> = 1</code>.
+    A célula <strong style="background:#1a3a6b;color:#fff;padding:0 5px;border-radius:2px;">azul escuro</strong>
+    indica o máximo (átomo mais deslocado para fora do plano);
+    a célula <strong style="background:#e8eef8;color:#1a3a6b;padding:0 5px;border-radius:2px;">azul claro</strong>
+    indica o mínimo.
+  </p>
+
+  <table class="pseudo-table">
+    <thead>
+      <tr>
+        <th class="th-left">P</th>
+        <th class="th-left">Conformação</th>
+        <th>C4' <sub style="font-size:0.58rem;opacity:0.7;">i=0</sub></th>
+        <th>O4' <sub style="font-size:0.58rem;opacity:0.7;">i=1</sub></th>
+        <th>C1' <sub style="font-size:0.58rem;opacity:0.7;">i=2</sub></th>
+        <th>C2' <sub style="font-size:0.58rem;opacity:0.7;">i=3</sub></th>
+        <th>C3' <sub style="font-size:0.58rem;opacity:0.7;">i=4</sub></th>
+        <th>Máximo</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td class="p-val">0°</td><td class="conf">C3'-endo <span class="region north">North</span></td><td class="tc vmax">+1.000</td><td class="tc vneg">-0.809</td><td class="tc vneu">+0.309</td><td class="tc vneu">+0.309</td><td class="tc vmin">-0.809</td><td class="tc maxatom">C4'</td></tr>
+<tr><td class="p-val">36°</td><td class="conf">C4'-exo <span class="region north">North</span></td><td class="tc vmax">+0.809</td><td class="tc vmin">-1.000</td><td class="tc vpos">+0.809</td><td class="tc vneu">-0.309</td><td class="tc vneu">-0.309</td><td class="tc maxatom">C4'</td></tr>
+<tr><td class="p-val">72°</td><td class="conf">O4'-endo <span class="region east">East</span></td><td class="tc vneu">+0.309</td><td class="tc vmin">-0.809</td><td class="tc vmax">+1.000</td><td class="tc vneg">-0.809</td><td class="tc vneu">+0.309</td><td class="tc maxatom">C1'</td></tr>
+<tr><td class="p-val">108°</td><td class="conf">C1'-exo <span class="region east">East</span></td><td class="tc vneu">-0.309</td><td class="tc vneu">-0.309</td><td class="tc vmax">+0.809</td><td class="tc vmin">-1.000</td><td class="tc vpos">+0.809</td><td class="tc maxatom">C1'</td></tr>
+<tr><td class="p-val">144°</td><td class="conf">C2'-endo <span class="region south">South</span></td><td class="tc vneg">-0.809</td><td class="tc vneu">+0.309</td><td class="tc vneu">+0.309</td><td class="tc vmin">-0.809</td><td class="tc vmax">+1.000</td><td class="tc maxatom">C3'</td></tr>
+<tr><td class="p-val">180°</td><td class="conf">C3'-exo <span class="region south">South</span></td><td class="tc vmin">-1.000</td><td class="tc vpos">+0.809</td><td class="tc vneu">-0.309</td><td class="tc vneu">-0.309</td><td class="tc vmax">+0.809</td><td class="tc maxatom">C3'</td></tr>
+<tr><td class="p-val">216°</td><td class="conf">C4'-endo <span class="region west">West</span></td><td class="tc vmin">-0.809</td><td class="tc vmax">+1.000</td><td class="tc vneg">-0.809</td><td class="tc vneu">+0.309</td><td class="tc vneu">+0.309</td><td class="tc maxatom">O4'</td></tr>
+<tr><td class="p-val">252°</td><td class="conf">O4'-exo <span class="region west">West</span></td><td class="tc vneu">-0.309</td><td class="tc vmax">+0.809</td><td class="tc vmin">-1.000</td><td class="tc vpos">+0.809</td><td class="tc vneu">-0.309</td><td class="tc maxatom">O4'</td></tr>
+<tr><td class="p-val">288°</td><td class="conf">C1'-endo</td><td class="tc vneu">+0.309</td><td class="tc vneu">+0.309</td><td class="tc vmin">-0.809</td><td class="tc vmax">+1.000</td><td class="tc vneg">-0.809</td><td class="tc maxatom">C2'</td></tr>
+<tr><td class="p-val">324°</td><td class="conf">C2'-exo <span class="region north">North</span></td><td class="tc vpos">+0.809</td><td class="tc vneu">-0.309</td><td class="tc vneu">-0.309</td><td class="tc vmax">+0.809</td><td class="tc vmin">-1.000</td><td class="tc maxatom">C2'</td></tr>
+    </tbody>
+  </table>
+
+  <p class="tbl-note">
+    <strong>Como ler a tabela:</strong> cada linha corresponde a um valor de P.
+    O átomo em <strong style="background:#1a3a6b;color:#fff;padding:0 4px;border-radius:2px;">azul escuro</strong>
+    tem o maior deslocamento fora do plano — é ele que define o nome da conformação
+    (<em>endo</em> = mesmo lado que C5'; <em>exo</em> = lado oposto).
+    À medida que P aumenta de 0° a 324°, o máximo gira pelo anel: este é o mecanismo de pseudorotação.
+    As regiões <span class="north" style="padding:0 5px;border-radius:2px;">North</span> (P ≈ 0°, C3'-<em>endo</em>, RNA)
+    e <span class="south" style="padding:0 5px;border-radius:2px;">South</span> (P ≈ 144–180°, C2'-<em>endo</em>, DNA)
+    são as mais relevantes biologicamente.
+  </p>
+  <p>
+  Um passo adiante no processo de modelagem das riboses foi dado por Dunitz(1972), 
+  com a demonstração de relações lineares entre os deslocamentos e ângulos de torções infinitesimais[dunitz72], 
+  então as aplitudes e fases nas equações de definição de Kilpatrick[1] e Altona[4] podem ser relacionados formalmente. 
+  No entanto, para deslocamentos finitos, como os apresentados pelas estruturas das riboses, 
+  há um desvio significante desta relação linear[6][dunitz72]. 
+  O processo de modelagem das torções no anel da ribose, descrito por Kilpatrick, 
+  é uma forma elegante porém uma patente aproximação do processo real.
+  Diante da impossibilidade de se descrever as conformações da ribose de forma exata, 
+  Cremer e Pole(1974) apresentam uma proposta de generalização desta representação aplicável a aneis com diferentes membros[6]. 
+  A generalização proposta apresenta correção em relação à proposta por Kilpatrick sem necessidade de aproximações[6].
+  </p>
+  <p>
+  Na década seguinte, Olson e grupo fizeram uma análise experimental e proposta energética para as conformações da ribose[10][11].
+   </p>
+  <p>
+  A 
+  </p>
+
+</div>
+
+      <h2 id="energia">Considerações sobre energia</h2>
+      <p>
+        As duas conformações existem em equilíbrio [2][3]; porém, a transição entre as mesmas 
+        não passa pela estrutura planar do anel, e sim por um arranjo mais complexo [2][3][8][9]. 
+        A distribuição experimental de energia ao longo deste equilíbrio está registrada na 
+        Figura <a href="#fig4" class="fig-ref">4</a> (panorama energético experimental).
+        Estudos teóricos e experimentais indicam que a barreira de interconversão entre as formas 
+        C2'-<em>endo</em> e C3'-<em>endo</em> é relativamente baixa, da ordem de 
+        2-5 kcal/mol, permitindo flexibilidade conformacional significativa da ribose em solução 
+        [10][11][12].
+      </p>
+      <p>
+      Vamos supor que se deseja modelar a ribose com uma função estatística capaz de prever suas conformações, como a utilizada na seçaõ anterior e, através dela, se obter a energia do sistema.
+      Comecemos com o estabelecimento da equação para as projeções de forma simples.
+      <div class="tbl-formula1" id="eq1">z<sub>i</sub>= t<sub>max</sub> cos[P + 4pi(i-1)/N ]</div>
+      com N = 5. Esta equação também funciona para N's diferentes de 5.
+      Vamos supor também que a energia potencial para a molécula seja:
+      </p>
+      <p>
+      <div class="tbl-formula2">V<sub>i</sub>(P,t<sub>max</sub>)= kz<sup>2</sup><sub>i</sub> /2
+       </div>
+       </p>
+       <p>
+       A correpondente função de partição canônica do sistema é então:
+       </p>
+       <div class="tbl-formula3">Z= &int; &int; e<sup>-betaV(P,t<sub>max</sub>) dP dt<sub>max</sub>
+       </div>
+       <p>
+       Vamos fixar o termo t<sub>max</sub>=1 e avaliar os possíveis resultados do mapeamento da função.
+       Para P = 0, o argumento da equação 4, é mapeado em projeções em relação ao plano de equilíbrio da ribose. Neste caso, P=0, mapeia a estrutura planar em seus estado de equilíbro não retorcido[1][4][]. P=1 mapeia os estados relacionados à torção da ribose como um todo, enquanto P= 2 mapeia os estador retorcidos da ribose[1][2][3][4]. Portanto, a integral sobre P varre o espaço configuracional do sistema. Em outras palavras, cada P representa um microestado do sistema e a integral sobre P contabiliza todos os microestados acessíveis ao sistema.
+       </p>
+       <p>
+       Podemos então buscar os valores médios das grandezas de interesse utilizando a nossa equação adaptada no nosso <em>toy model</em> para t<sub>max</sub> fixo, com função de partir dada por:
+       <div class="tbl-formula3">Z= &int; &int; e<sup>-betaV(P)</sup> dP
+       </div>
+       e médias ou medidas macroscópicas dadas por
+       <div class="tbl-formula3">Z= &int; &int; ye<sup>-betaV(P)</sup> dP
+       </div>
+       onde y é o parâmetro de interesse.
+       </p>
+       <p>
+       Em resumo, temos uma função que mapeia as projeções dos átomos da ribose para fora do plano.
+       Esta função contém dois parâmetros, um relacionado à uma fase e outro às amplitudes das projeções.
+       Podemos considerar, em um modelo inicial, as amplitudes das projeções fixas, e então a energia do sistema depende apenas da fase.
+       Nestas condições, a fase pode assumir valores tais que cada fase resulta em um conjunto de projeções de átomos para fora do plano.
+       Estas projeções podem ser utilizadas para se modelar o sistema energeticamente. Desta forma, encontramos uma relação entre os microestados da ribose e a energia confromacional do sistema. De posse desta relação pode-se construir a função de partição canonica conformacional da ribose. Temos um conjunto de estados indexados pelo parametro contínuo P e, portanto a função deve ser integrada no intervalo de 0 a 2*pi. Os valores médios das grandezas de interesse físico podem ser obtidos por meio da relação com a variável dinâmica do hamiltoniano, se este for função desta variável, de forma protocolar da física estatística.
+       </p>
+
 
       <!-- CONCLUSÃO -->
       <h2 id="conclusao">Conclusão e Conexão com as Modificações</h2>
       <p>
-        [Sobre modificações no esqueleto — descrição a ser expandida.]
+        A compreensão do fenômeno de pseudorotação e das preferências conformacionais da ribose 
+        o equilíbrio conformacional, favorecendo uma das formas <em>endo</em> em detrimento da outra.
+        é fundamental para o estudo das modificações químicas no esqueleto do RNA...
       </p>
       <p>
-        [Descrição das implicações conformacionais para as modificações químicas estudadas.]
+        Modificações na ligação fosfodiéster...
       </p>
 
       <!-- REFERÊNCIAS -->
       <div class="references">
         <h2 style="margin-top:0; margin-bottom:1rem;">Referências</h2>
         <ul>
-          <li>[1] John E. Kilpatrick, Kenneth S. Pitzer and Ralph Spitzer. <em>The Thermodynamics and Molecular Structure of Cyclopentane.</em> 1947.</li>
-          <li>[2] Saenger, Wolfram. <em>Principles of Nucleic Acid Structure.</em> pp. 9–28. New York: Springer, 1984.</li>
-          <li>[3] Neidle, Stephen. <em>[Título a confirmar].</em></li>
-          <li>[4] C. Altona and M. Sundaralingam. <em>Conformational Analysis of the Sugar Ring in Nucleosides and Nucleotides. A New Description Using the Concept of Pseudorotation.</em> 1972.</li>
+          <li>[1] J. E. Kilpatrick, K. S. Pitzer e R. Spitzer. <em>The Thermodynamics and Molecular Structure of Cyclopentane.</em> Journal of the American Chemical Society, 1947, 69 (10), pp 2483–2488.</li>
+          <li>[2] W. Saenger. <em>Principles of Nucleic Acid Structure.</em> Springer, Nova York, 1984, pp. 9–28.</li>
+          <li>[3] S. Neidle. <em>Nucleic Acid Structure and Recognition.</em> Oxford University Press, 2002.</li>
+          <li>[4] C. Altona e M. Sundaralingam. <em>Conformational Analysis of the Sugar Ring in Nucleosides and Nucleotides. A New Description Using the Concept of Pseudorotation.</em> Journal of the American Chemical Society, 1972, 94 (23), pp 8205–8212.</li>
+          <li>[5] H. J. Geise, C. Altona e C. Romers. <em>The Relations Between Torsional and Valency Angles of Cyclopentane.</em> Tetrahedron, 1967, 23 (2), pp 439–463.</li>
+          <li>[6] D. Cremer e J. A. Pople. <em>A General Definition of Ring Puckering Coordinates.</em> Journal of the American Chemical Society, 1975, 97 (6), pp 1354–1358.</li>
+          <li>[7] D. Cremer e J. A. Pople. <em>Molecular Orbital Theory of the Electronic Structure of Organic Compounds. XXIII. Pseudorotation in Saturated Five-Membered Ring Compounds.</em> Journal of the American Chemical Society, 1975, 97 (6), pp 1358–1367.</li>
+          <li>[8] M. Levitt e A. Warshel. <em>Extreme Conformational Flexibility of the Furanose Ring in DNA and RNA.</em> Journal of the American Chemical Society, 1978, 100 (9), pp 2607–2613.</li>
+          <li>[9] W. J. Adams, H. J. Geise e L. S. Bartell. <em>Structure, Equilibrium Conformation, and Pseudorotation in Cyclopentane. An Electron Diffraction Study.</em> Journal of the American Chemical Society, 1970, 92 (17), pp 5013–5019.</li>
+          <li>[10] W. K. Olson e J. L. Sussman. <em>How Flexible Is the Furanose Ring? 1. A Comparison of Experimental and Theoretical Studies.</em> Journal of the American Chemical Society, 1982, 104 (1), pp 270–278.</li>
+          <li>[11] W. K. Olson. <em>How Flexible Is the Furanose Ring? 2. An Updated Potential Energy Estimate.</em> Journal of the American Chemical Society, 1982, 104 (1), pp 278–286.</li>
+          <li>[12] H. P. M. de Leeuw, C. A. G. Haasnoot e C. Altona. <em>Empirical Correlations Between Conformational Parameters in β-D-Furanoside Fragments Derived from a Statistical Survey of Crystal Structures of Nucleic Acid Constituents. Full Description of Nucleoside Molecular Geometries in Terms of Four Parameters.</em> Israel Journal of Chemistry, 1980, 20 (1-2), pp 108–126.</li>
         </ul>
       </div>
 
@@ -380,47 +652,54 @@
 
     </div><!-- /text-col -->
 
-    <!-- ════ COLUNA DE FIGURAS (ocupa o resto da página) ════ -->
+    <!-- ════ COLUNA DE FIGURAS ════ -->
     <div class="fig-col">
-
+    
       <!-- Figura 1 -->
       <figure class="margin-fig" id="fig1">
-        <div class="fig-placeholder">
-          <!--
-            Para inserir a imagem real, substitua este <div class="fig-placeholder"> pelo tag:
-            <img src="img/espaco_conformacoes.png" alt="Espaço de conformações da ribose">
-          -->
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="26" stroke="#1a3a6b" stroke-width="1.4" stroke-dasharray="4 3"/>
-            <circle cx="32" cy="32" r="14" stroke="#1a3a6b" stroke-width="1" stroke-dasharray="2 2"/>
-            <line x1="32" y1="6"  x2="32" y2="58" stroke="#1a3a6b" stroke-width="0.8" stroke-dasharray="2 2"/>
-            <line x1="6"  y1="32" x2="58" y2="32" stroke="#1a3a6b" stroke-width="0.8" stroke-dasharray="2 2"/>
-            <circle cx="32" cy="6"  r="3.5" fill="#2e5caa"/>
-            <circle cx="57" cy="21" r="3.5" fill="#2e5caa"/>
-            <circle cx="49" cy="53" r="3.5" fill="#2e5caa"/>
-            <circle cx="15" cy="53" r="3.5" fill="#2e5caa"/>
-            <circle cx="7"  cy="21" r="3.5" fill="#2e5caa"/>
-          </svg>
-          <span>imagem a inserir</span>
-        </div>
+        <img src="img/endo_exo.png" alt="Conformações endo-exo">
         <figcaption class="fig-caption">
           <span class="fig-label">Figura 1</span>
-          <span class="fig-title">Espaço de conformações</span>
+          <span class="fig-title">Conformações <em>endo-exo</em> da ribose</span>
           <p class="fig-desc">
-            [Descrição: representação do espaço conformacional da ribose, indicando as regiões
-            de C2'-<em>endo</em> e C3'-<em>endo</em> e os caminhos de interconversão ao longo
-            do ângulo de pseudorotação P. Fonte: a inserir.]
+            Representação das conformações da ribose C2'-<em>endo</em> e C3'-<em>endo</em>, 
+            mostrando a projeção dos átomos de carbono em relação à ligação C4'–C5'.
+            Fonte: adaptado de Saenger (1984) [2].
           </p>
         </figcaption>
       </figure>
 
       <!-- Figura 2 -->
       <figure class="margin-fig" id="fig2">
+        <img src="img/pseudorotation_basic.svg" alt="Espaço de conformações da ribose">
+        <figcaption class="fig-caption">
+          <span class="fig-label">Figura 2</span>
+          <span class="fig-title">Espaço de conformações da ribose</span>
+          <p class="fig-desc">
+            Representação do espaço conformacional da ribose, indicando as regiões
+            de C2'-<em>endo</em> e C3'-<em>endo</em> e os caminhos de interconversão ao longo
+            do ângulo de pseudorotação P. Fonte: adaptado de Altona & Sundaralingam (1972) [4].
+          </p>
+        </figcaption>
+      </figure>
+      
+      <!-- Figura 3 -->
+      <figure class="margin-fig" id="fig3">
+        <img src="img/pseudorotation.svg" alt="Esquema de pseudorotação">
+        <figcaption class="fig-caption">
+          <span class="fig-label">Figura 3</span>
+          <span class="fig-title">Esquema de pseudorotação</span>
+          <p class="fig-desc">
+            Esquema de visualização das projeções de máximos mapeados pela pseudorrotação. 
+            (a) Espaço entre extremos de posições atômicas; (b) máximo em O' ou 0; 
+            (c) C1'; (d) C2'; (e) C3'; (f) C4'. Fonte: adaptado de Kilpatrick et al. (1947) [1].
+          </p>
+        </figcaption>
+      </figure>
+      
+      <!-- Figura 4 (placeholder com SVG) -->
+      <figure class="margin-fig" id="fig4">
         <div class="fig-placeholder">
-          <!--
-            Para inserir a imagem real, substitua este <div class="fig-placeholder"> pelo tag:
-            <img src="img/panorama_exp.png" alt="Panorama energético experimental das conformações da ribose">
-          -->
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="8" y1="54" x2="58" y2="54" stroke="#1a3a6b" stroke-width="1"/>
             <line x1="8" y1="8"  x2="8"  y2="54" stroke="#1a3a6b" stroke-width="1"/>
@@ -432,28 +711,12 @@
           <span>imagem a inserir</span>
         </div>
         <figcaption class="fig-caption">
-          <span class="fig-label">Figura 2</span>
-          <span class="fig-title">Panorama energético experimental das conformações da ribose</span>
+          <span class="fig-label">Figura 4</span>
+          <span class="fig-title">Panorama energético experimental</span>
           <p class="fig-desc">
-            [Descrição: perfil de energia livre experimental em função do ângulo de
-            pseudorotação P, obtido a partir de dados de RMN ou cristalografia.
-            Indicar os mínimos correspondentes a C2'-<em>endo</em> e C3'-<em>endo</em>.
-            Fonte: a inserir.]
-          </p>
-        </figcaption>
-      </figure>
-
-      <!-- Figura 3 -->
-      <figure class="margin-fig" id="fig3">
-        <img src="img/ribose.svg.2026_05_28_22_49_35.0.svg" alt="Panorama energético teórico — ângulo de pseudorotação">
-        <figcaption class="fig-caption">
-          <span class="fig-label">Figura 3</span>
-          <span class="fig-title">Panorama energético teórico das conformações da ribose: ângulo de pseudorotação</span>
-          <p class="fig-desc">
-            [Descrição: perfil de energia calculado computacionalmente como função do ângulo de
-            pseudorotação P (0° a 360°), mostrando os mínimos em P ≈ 18° (C3'-<em>endo</em>)
-            e P ≈ 162° (C2'-<em>endo</em>). Método e nível de teoria a especificar.
-            Fonte: a inserir.]
+            Perfil de energia livre experimental em função do ângulo de pseudorotação P, 
+            obtido a partir de dados de RMN ou cristalografia. Os mínimos correspondem a 
+            C2'-<em>endo</em> e C3'-<em>endo</em>. Fonte: a inserir.
           </p>
         </figcaption>
       </figure>
